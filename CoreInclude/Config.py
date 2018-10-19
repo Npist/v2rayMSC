@@ -1,6 +1,6 @@
 TitleName = 'Npist'
 DOMAIN = 'https://proxy.npist.com'
-UA = 'V2rayMS_Client'
+UA = 'V2rayMS_Client/API0.1'
 
 
 class global_var:
