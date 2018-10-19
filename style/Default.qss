@@ -1,0 +1,455 @@
+* {
+    color: rgb(165, 165, 165);
+    font-family: "微软雅黑";
+}
+
+/*菜单栏*/
+#menubar {
+    background-color: rgb(54, 55, 56);
+}
+/*上下左右边距*/
+#menubar::item {
+    padding: 10px 10px;
+    background-color: rgb(54, 55, 56);
+}
+/*鼠标悬停背景颜色*/
+#menubar::item:hover {
+    background-color: rgb(69, 70, 71);
+}
+/*选中效果*/
+#menubar::item:selected, #menubar::item:pressed {
+    color: white;
+    background-color: rgb(36, 175, 255);
+}
+
+/*菜单栏中弹出的菜单*/
+#menubar > QMenu {
+    color: rgb(165, 165, 165);
+    background-color: rgb(60, 61, 65);
+}
+/*菜单中的分割线*/
+#menubar > QMenu::separator {
+    height: 2px;
+    background-color: rgb(45, 46, 48);
+}
+#menubar > QMenu::item {
+    padding: 10px 20px;
+}
+/*菜单项被选中(悬停)*/
+#menubar > QMenu::item:selected {
+    color: white;
+    background-color: rgb(36, 175, 255);
+}
+/*菜单项被按下*/
+#menubar > QMenu::item:pressed {
+    color: rgb(220, 220, 220);
+    background-color: rgb(27, 170, 250);
+}
+
+/*标题栏*/
+TitleWidget {
+    /*background-color: rgb(54, 55, 56);*/
+}
+BaseTitleWidget {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: rgb(54, 55, 56);
+}
+/*标题栏中间文字*/
+TitleWidget > #labelTitle, BaseTitleWidget > #labelTitle {
+    font-weight: bold;
+}
+/*标题栏右侧工具按钮*/
+TitleWidget > QPushButton {
+    color: rgb(165, 165, 165);
+    border: none;
+    font-size: 12pt;
+    font-family: "Webdings";
+}
+BaseTitleWidget > QPushButton {
+    color: rgb(165, 165, 165);
+    border: none;
+    border-top-right-radius: 4px;
+    font-size: 12pt;
+    font-family: "Webdings";
+}
+TitleWidget > QPushButton:hover, BaseTitleWidget > QPushButton:hover {
+    background-color: rgb(73, 74, 75);
+}
+TitleWidget > QPushButton:pressed, BaseTitleWidget > QPushButton:pressed {
+    background-color: rgb(48, 49, 50);
+}
+/*关闭按钮*/
+TitleWidget > #buttonClose:hover, BaseTitleWidget > #buttonClose:hover {
+    color: white;
+    background-color: rgb(200, 80, 80);
+}
+TitleWidget > #buttonClose:pressed, BaseTitleWidget > #buttonClose:pressed {
+    background-color: rgb(137, 54, 54);
+}
+/*标题栏登录按钮*/
+/* TitleWidget > #buttonLogin {
+    color: rgb(36, 175, 255);
+    font-family: "qtskin";
+}
+TitleWidget > #buttonLogin:hover {
+    color: rgb(65, 197, 244);
+    background-color: rgb(54, 55, 56);
+}
+TitleWidget > #buttonLogin:pressed {
+    color: rgb(9, 140, 216);
+    background-color: rgb(54, 55, 56);
+}
+TitleWidget > #lineLogin {
+    color: rgb(45, 46, 48);
+    margin-top: 8px;
+    margin-bottom: 8px;
+} */
+
+/*弹出对话框背景*/
+#dialogWidgetBg {
+    border-radius: 4px;
+    background-color: rgb(44, 45, 46);
+}
+/*激活状态*/
+#dialogWidgetBg[active="true"] {
+    border: 1px solid rgba(36, 175, 255, 150);
+}
+/*非激活状态*/
+#dialogWidgetBg[active="false"] {
+    border: 1px solid transparent; /*透明边框*/
+}
+/*错误状态*/
+#dialogWidgetBg[active="error"] {
+    border: 1px solid rgba(255, 0, 0, 150);
+}
+
+#labelHead {
+    font-size: 80px;
+    font-family: "qtskin";
+}
+#labelNotice {
+    font-size: 10pt;
+    font-family: "qtskin";
+    color: red;
+}
+#editUsername, #editPassword, #editProjectName {
+    padding: 0px 0px 0px 8px;  /*上右下左*/
+    border-radius: 4px;
+    border: 1px solid transparent; /*透明边框*/
+    background-color: rgb(25, 25, 26);
+    selection-color: black; /*选中文字的颜色*/
+    selection-background-color: rgb(181, 213, 255); /*选中文字背景色*/
+}
+#editUsername:focus, #editPassword:focus, #editProjectName:focus {
+    border-radius: 4px;
+    border: 1px solid rgb(36, 175, 255);
+}
+QLineEdit {
+    lineedit-password-character: 42;  /*星号*/
+}
+#editPassword {
+    padding: 0px 8px;  /*上下0 左右8*/
+}
+
+/*登录按钮、创建项目按钮、对话框确定按钮*/
+#loginWidgetEdit > #buttonLogin, #buttonCreate, #buttonOk {
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(36, 175, 255);
+}
+#loginWidgetEdit > #buttonLogin:hover, #buttonCreate:hover, #buttonOk:hover {
+    background-color: rgb(58, 183, 255);
+}
+#loginWidgetEdit > #buttonLogin:pressed, #buttonCreate:pressed, #buttonOk:pressed {
+    background-color: rgb(34, 168, 245);
+}
+
+/*对话框内容文字颜色*/
+#labelMessage {
+    color: white;
+}
+
+/*对话框取消按钮*/
+#buttonCancel {
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(78, 79, 81);
+}
+#buttonCancel:hover {
+    background-color: rgb(98, 99, 101);
+}
+#buttonCancel:pressed {
+    background-color: rgb(73, 74, 76);
+}
+
+/*首页、我的项目页面*/
+#widgetHome, #widgetWorkspace, #listViewProjects, #listViewFiles, QSplitter {
+    background-color: rgb(35, 35, 36);
+}
+
+QSplitter::handle {
+    background-color: rgb(35, 35, 36);
+}
+QSplitter::handle:horizontal {
+    width: 2px;
+}
+QSplitter::handle:vertical {
+    height: 2px;
+}
+QSplitter::handle:pressed {
+    background-color: rgb(52, 53, 57);
+}
+
+/*去掉item虚线边框*/
+#listViewProjects, #listViewFiles {
+    outline: 0px;
+}
+/*item的悬停和选中效果*/
+#listViewProjects::item:hover, #listViewFiles::item:hover {
+    /*从上到下的透明白色到黑色渐变*/
+    border-radius: 6px;
+    background-color: rgba(100, 100, 100, 0);
+    /* background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0.8, stop:0 rgba(0, 0, 0, 100), stop:1 rgba(255, 255, 255, 0)); */
+}
+#listViewProjects::item:selected, #listViewFiles::item:selected {
+    border-radius: 3px;
+    border: 2px solid rgba(32, 155, 227, 0.8);
+}
+#listViewProjects::item:selected:!active, #listViewFiles::item:selected:!active {
+    border-radius: 3px;
+    border: 2px solid rgb(32, 155, 227);
+}
+
+/*我的项目、创建项目的面板背景*/
+#widgetNavbar {
+    border-top: 1px solid rgb(40, 41, 41);
+    border-bottom: 1px solid rgb(28, 28, 29);
+    background-color: rgb(44, 45, 46);
+}
+/*创建项目, 添加文件按钮*/
+/* #buttonAddProject, #buttonAddFile {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-family: "qtskin";
+    background-color: rgb(36, 175, 255);
+}
+#buttonAddProject:hover, #buttonAddFile:hover {
+    background-color: rgb(58, 183, 255);
+}
+#buttonAddProject:pressed, #buttonAddFile:pressed {
+    background-color: rgb(34, 168, 245);
+} */
+
+#buttonSortConnect {
+    color: white;
+    border-radius: 4px;
+    background-color: rgba(75, 240, 130, 0.8);
+}
+#buttonSortConnect:hover {
+    background-color: rgba(80, 245, 130, 0.6);
+}
+#buttonSortConnect:pressed {
+    background-color: rgba(73, 235, 130, 0.4);
+}
+#buttonSortunConnect {
+    color: white;
+    border-radius: 4px;
+    background-color: rgba(238, 63, 92, 0.8);
+}
+#buttonSortunConnect:hover {
+    background-color: rgba(250, 70, 92, 0.6);
+}
+#buttonSortunConnect:pressed {
+    background-color: rgba(230, 60, 92, 0.4);
+}
+
+/*项目数量、排序按钮背景面板底部 渐变边框(左右两头有缩进)*/
+#widgetProjectCount {
+    border-bottom: 2px solid qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:1, y2:0.5, stop:0.95 rgba(48, 48, 49, 255), stop:1 rgba(35, 35, 36, 255));
+}
+/*排序按钮*/
+/* #buttonSortTime, #buttonSortAz {
+    border: none;
+    font: 15pt "FontAwesome";
+    color: rgb(122, 125, 128);
+    background-color: transparent;
+}
+#buttonSortTime:checked, #buttonSortAz:checked {
+    color: rgb(171, 175, 179);
+}
+#buttonSortTime:hover, #buttonSortAz:hover {
+    color: rgb(147, 150, 153);
+}
+#buttonSortTime:pressed, #buttonSortAz:pressed {
+    color: rgb(97, 99, 102);
+} */
+
+/*项目主页每个item的样式*/
+ProjectItemWidget {
+    font-family: "华文行楷";
+    font-size: 80px;
+    border-radius: 6px;
+    margin: 6px; /*让控件整体往内部缩进4px*/
+    background-color: rgb(73, 75, 77);
+}
+/* #buttonDelete {
+    font-family: "qtskin";
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(14, 15, 15, 150);
+}
+#buttonDelete:hover {
+    background-color: rgba(14, 15, 15, 200);
+}
+#buttonDelete:pressed {
+    background-color: rgb(14, 15, 15);
+} */
+/*项目Item底部黑色*/
+ProjectItemWidget > #widgetBottom {
+    background-color: rgba(14, 15, 15, 200);
+}
+
+/*很细的竖向滚动条*/
+#rightScrollBar:vertical {
+    border: none;
+    background-color: transparent;
+    min-width: 8px;
+    max-width: 8px;
+    margin: 0px 0px 0px 0px;
+}
+#rightScrollBar::add-page:vertical, #rightScrollBar::sub-page:vertical {
+    background: none;
+}
+#rightScrollBar::handle:vertical {
+    background-color: rgb(68, 68, 68);
+    min-width: 8px;
+    max-width: 8px;
+    border-radius: 4px;
+}
+#rightScrollBar::handle:vertical:hover {
+    background-color: rgb(92, 92, 92);
+}
+#rightScrollBar::handle:vertical:pressed {
+    background-color: rgb(77, 77, 77);
+}
+#rightScrollBar::add-line:vertical {
+    border: none;
+    background: transparent;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+#rightScrollBar::sub-line:vertical {
+    border: none;
+    background: transparent;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+/*底部进度条*/
+#progressBar {
+    border: none;
+    background-color: rgb(35, 35, 36);
+}
+#progressBar::chunk {
+    background-color: rgb(36, 175, 255);
+}
+
+/*底部状态栏*/
+QStatusBar {
+    color: rgb(165, 165, 165);
+    background-color: rgb(54, 55, 56);
+}
+
+/*右侧控件item,去掉边框*/
+QStatusBar::item {
+    border: none;
+}
+
+/*底部状态栏右下角按钮*/
+#buttonHome, #buttonShare, #buttonFeed {
+    min-width: 25px;
+    max-width: 25px;
+    min-height: 25px;
+    max-height: 25px;
+    border: none;
+    font-weight: bold;
+    font-family: "qtskin";
+    background-color: transparent;
+}
+#buttonHome:hover, #buttonShare:hover, #buttonFeed:hover {
+    background-color: rgb(73, 74, 75);
+}
+#buttonHome:pressed, #buttonShare:pressed, #buttonFeed:pressed {
+    background-color: rgb(48, 49, 50);
+}
+
+/* **********项目设计页面********** */
+
+/*我的项目,项目名按钮*/
+/* #buttonMyProject, #buttonCurrentProject {
+    font-family: "qtskin";
+    background-color: transparent;
+}
+#buttonMyProject:hover, #buttonCurrentProject:hover {
+    color: rgb(202, 202, 202);
+}
+#vLine {
+    color: rgb(90, 91, 92);
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+/*右侧设计面板*/
+/*
+#toolWidget {
+    background-color: rgb(44, 45, 46);
+} 
+*/
+/**********下拉列表**********/
+QComboBox {
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid rgb(100, 100, 100);
+    background: rgb(72, 72, 73);
+}
+QComboBox:enabled {
+    color: rgb(175, 175, 175);
+}
+QComboBox:!enabled {
+    color: rgb(155, 155, 155);
+}
+QComboBox:enabled:hover, QComboBox:enabled:focus {
+    color: rgb(230, 230, 230);
+    background: rgb(68, 69, 73);
+}
+QComboBox::drop-down {
+    width: 20px;
+    border: none;
+    background: transparent;
+}
+QComboBox::drop-down:hover {
+    background: rgba(255, 255, 255, 30);
+}
+QComboBox::down-arrow {
+    image: url(:/Black/arrowBottom);
+}
+/* QComboBox::down-arrow:on {
+    *top: 1px;*
+} */
+QComboBox QAbstractItemView {
+    border: 1px solid rgb(100, 100, 100);
+    background: rgb(68, 69, 73);
+    outline: none;
+}
+QComboBox QAbstractItemView::item {
+    height: 25px;
+    color: rgb(175, 175, 175);
+}
+QComboBox QAbstractItemView::item:selected {
+    background: rgba(255, 255, 255, 40);
+    color: rgb(230, 230, 230);
+}
